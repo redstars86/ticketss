@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ticket Bookings</title>
+
+	<link rel="stylesheet" type="text/css" href="LO3.css">
+    <script type="text/javascript" src="LO3.js"></script>
+    
+</head>
+
+<body onLoad="rotate()">
+	<center>
+    <img src="images/Calvin-banner.png" name="adBanner" alt="Ad Banner"/>
+    </center>
+    
+    <div id="form-container">
+    
+    <form action="ticket.html" name="myForm" onSubmit="return(validate());">
+   
+	<p><label for="name">Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="text" name="name" id="name" size="30">
+	</p>
+	<p><label for="name">Address</label>&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="text" name="address" id="address" size="30">
+	</p>
+	<p><label for="name">Telephone</label>
+	<input type="tel" name="telephone" id="telephone" size="30">
+	</p>
+	<p><label for="name">Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="email" name="email" id="email" size="30">
+	</p>
+   
+    <br>
+
+   <h2>Who do you want to see?</h2>
+    <select name="artist" id="artist" onChange="fillDate()">
+        <option>Select an Artist</option>
+        <option value="madonna">Madonna</option>
+        <option value="stereophonics">Stereophonics</option>
+        <option value="calvinHarris">Calvin Harris</option>
+        <option value="oasis">Oasis</option>
+        
+    </select>
+   
+    <br>
+    <h2>When?</h2>
+    <select name="date" id="date" style="width:120px">
+        <option>Select Date</option>
+    </select>
+    <br>
+    <h2>Price bracket?</h2>
+    <select name="price" id="price" style="width:120px">
+        <option>Select Price</option>
+    </select>
+    <br>
+    <br>
+     <h2>How many?</h2>
+     <select name="tickets" id="tickets" style="width:50px">
+        <option>Select Tickets</option>
+    </select>
+    <h3> *There will be an additional £10 fee for customers buying 4 or more tickets.</h3>
+    <br>
+    <br>
+        <label for="totalPrice">Total Price: </label>
+        <input type="text" name="totalPrice" id="totalPrice" readonly/>
+    <br>
+    <p><center><input type="submit" name="submit" value="Submit" /></center></p>
+    			
+    </form>	
+    </div>
+</body>
+</html>
